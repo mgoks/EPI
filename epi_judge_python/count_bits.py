@@ -1,9 +1,12 @@
 from test_framework import generic_test
 
-
+# O(N) time and space in the number of bits of x
 def count_bits(x: int) -> int:
-    # TODO - you fill in here.
-    return 0
+    n = 0
+    while x > 0:
+        n += x & 1
+        x >>= 1
+    return n
 
 
 if __name__ == '__main__':
